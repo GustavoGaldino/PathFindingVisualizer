@@ -23,6 +23,7 @@ const Grid = (props) => {
                 <GridRow
                     row={row}
                     key={index}
+                    cellSize={props.cellSize}
                 />
             ))}
         </div>

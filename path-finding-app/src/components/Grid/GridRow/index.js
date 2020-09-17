@@ -4,11 +4,12 @@ import GridCell from './GridCell'
 
 const GridRow = (props) => {
     return(
-        <div>
+        <div className="grid-row" style={{height: props.cellSize}}>
             {props.row.map((cell) => (
                 <GridCell
                     cell={cell}
                     key={cell.key}
+                    cellSize={props.cellSize}
                 />
             ))}
         </div>

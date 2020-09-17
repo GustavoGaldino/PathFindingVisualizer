@@ -1,10 +1,17 @@
 import React from 'react'
 
 const GridCell = (props) => {
-    return(
-        <div style={{backgroundColor: (props.cell.available ? "red" : "red"), width: "100px", height: "100px", display: "inline-block", border: "solid black 2px"}}>
 
-        </div>
+    const myStyle = {
+        backgroundColor: props.cell.available? "white" : "grey",
+        width: props.cellSize,
+        height: props.cellSize,
+        border: "solid 1px black",
+        display: "inline-block"
+    }
+
+    return(
+        <div className="grid-cell" style={myStyle} />
     );
 }
 
