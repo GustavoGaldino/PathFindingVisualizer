@@ -5,10 +5,10 @@ import startIcon from '../../../assets/images/start.png'
 
 import './styles.css'
 
-const GridHeader = () => {
+const GridHeader = (props) => {
     return(
         <div className="grid-header">
-            <button className="icon-btn">
+            <button className="icon-btn" onClick={props.pathFindingAlgorithm}>
                 <img src={startIcon} className="icon"/>
             </button>
             <button className="icon-btn">
