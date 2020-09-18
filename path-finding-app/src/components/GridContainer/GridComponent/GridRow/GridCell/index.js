@@ -3,7 +3,7 @@ import React from 'react'
 const GridCell = (props) => {
 
     const myStyle = {
-        backgroundColor: props.cell.available? "white" : "grey",
+        backgroundColor: props.cell.available? "white" : "black",
         width: props.cellSize,
         height: props.cellSize,
         border: "solid 1px black",
