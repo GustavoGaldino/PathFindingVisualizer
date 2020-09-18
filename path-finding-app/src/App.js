@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route} from 'react-router-dom'
 
 import Landing from './components/Landing'
 
-import './App.css'
+import './assets/styles/global.css'
 
 function App() {
   return (
