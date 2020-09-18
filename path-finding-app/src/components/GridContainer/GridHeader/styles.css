@@ -1,0 +1,18 @@
+.grid-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px black;
+    padding: .5rem 0;
+}
+
+.icon-btn{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon{
+    margin: 0 4rem;
+}

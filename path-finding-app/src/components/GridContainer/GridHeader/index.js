@@ -3,14 +3,16 @@ import React from 'react'
 import helpIcon from '../../../assets/images/help.png'
 import startIcon from '../../../assets/images/start.png'
 
+import './styles.css'
+
 const GridHeader = () => {
     return(
-        <div className="grid-header" style={{border: "solid 1px black", paddingTop: "4px", display: "flex", justifyContent: "center"}}>
+        <div className="grid-header">
             <button>
-                <img src={helpIcon} style={{margin: "0 4rem"}}/>
+                <img src={startIcon} className="icon"/>
             </button>
             <button>
-                <img src={startIcon} style={{margin: "0 4rem"}}/>
+                <img src={helpIcon} className="icon"/>
             </button>
         </div>
     )
