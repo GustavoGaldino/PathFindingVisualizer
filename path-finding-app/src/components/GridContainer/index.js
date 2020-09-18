@@ -1,13 +1,13 @@
 import React from 'react'
 
-import Grid from './Grid'
+import GridComponent from './GridComponent'
 import GridHeader from './GridHeader'
 
 const GridContainer = () => {
     return(
         <div className="grid-container">
             <GridHeader />
-            <Grid
+            <GridComponent
                 rows={20}
                 cols={20}
                 cellSize={"20px"}

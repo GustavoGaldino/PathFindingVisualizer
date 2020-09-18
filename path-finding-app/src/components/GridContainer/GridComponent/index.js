@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import GridRow from './GridRow'
 
-const Grid = (props) => {    
+const GridComponent = (props) => {    
     const [grid, setGrid] = useState([])
 
     useEffect( () => {
@@ -30,4 +30,4 @@ const Grid = (props) => {
     );
 }
 
-export default Grid;
+export default GridComponent;
