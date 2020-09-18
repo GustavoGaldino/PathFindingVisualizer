@@ -8,10 +8,10 @@ import './styles.css'
 const GridHeader = () => {
     return(
         <div className="grid-header">
-            <button>
+            <button className="icon-btn">
                 <img src={startIcon} className="icon"/>
             </button>
-            <button>
+            <button className="icon-btn">
                 <img src={helpIcon} className="icon"/>
             </button>
         </div>
