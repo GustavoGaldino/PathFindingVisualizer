@@ -14,6 +14,7 @@ const GridHeader = (props) => {
         <div className="grid-header">
             <button className="icon-btn" onClick={async () => {
                 setRunningAlgorithm(true);
+                props.cleanAllVisitedCells();
                 await props.pathFindingAlgorithm(props.startingNode, props.goalNode);
                 setRunningAlgorithm(false);
             }}>

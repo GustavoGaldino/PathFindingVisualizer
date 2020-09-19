@@ -17,6 +17,16 @@ const GridContainer = (props) => {
         setGrid(newGridState);
     }
 
+    const cleanAllVisitedCells = () => {
+        let newGridState = {...grid};
+        for(let i = 0 ; i < newGridState.rows ; i++){
+            for(let j = 0 ; j < newGridState.cols ; j++){
+                newGridState.gridTable[i][j].visited = false;
+            }
+        }
+        setGrid(newGridState)
+    }
+
     const toggleAvailableCell = (cell,grid) => {
         let newGridState = {...grid};
         newGridState.gridTable[cell.x][cell.y].available = !newGridState.gridTable[cell.x][cell.y].available;
@@ -60,6 +70,7 @@ const GridContainer = (props) => {
                 startingNode={props.startingNode}
                 goalNode={props.goalNode}
                 setInitialState={setInitialState}
+                cleanAllVisitedCells={cleanAllVisitedCells}
             />
             <GridComponent
                 rows={props.rows}
