@@ -17,7 +17,7 @@ class Cell{
             let neighbourX = this.x + directions[0];
             let neighbourY = this.y + directions[1];
             if(this.grid.isValidPosition(neighbourX,neighbourY) && this.grid.isWalkableCell(this.grid.getCell(neighbourX,neighbourY))){
-                if(!(this.grid.getCell(neighbourX,neighbourY).startingNode || this.grid.getCell(neighbourX,neighbourY).goalNode)){
+                if(!(this.grid.getCell(neighbourX,neighbourY).startingNode)){
                     neighbours.push(this.grid.getCell(neighbourX,neighbourY));
                 }
             }

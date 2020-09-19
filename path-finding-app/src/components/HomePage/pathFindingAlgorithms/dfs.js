@@ -2,9 +2,9 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 
-async function dfs(currentNode, goalNode, visitedSet=(new Set())){
+async function dfs(currentNode, goalNode, visitedSet=(new Set()), flagObject={endRecursionFlag: false}){
     if(currentNode === goalNode){
-        alert("Found the goal node.")
+        flagObject.endRecursionFlag = true;
     }
     else{
         let currentNodeNeighbours = currentNode.getNeighbours();
@@ -12,8 +12,11 @@ async function dfs(currentNode, goalNode, visitedSet=(new Set())){
             if(!visitedSet.has(neighbour)){
                 visitedSet.add(neighbour);
                 neighbour.markAsVisited();
-                await sleep(25);
-                await dfs(neighbour, goalNode, visitedSet);
+                await sleep(10);
+                await dfs(neighbour, goalNode, visitedSet, flagObject);
+                if(flagObject.endRecursionFlag){
+                    return
+                }
             }
         }
     }
