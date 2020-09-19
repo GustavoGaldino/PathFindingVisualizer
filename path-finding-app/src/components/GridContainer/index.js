@@ -31,11 +31,15 @@ const GridContainer = (props) => {
         setGrid(newGridState);
     }
 
-    useEffect(() => {
+    const setInitialState = () => {
         let initialGridState = new Grid(props.rows, props.cols, updateVisitedCell);
         setGrid(initialGridState);
         updateStartingNode(6,6,initialGridState);
         updateGoalNode(props.rows-1,props.cols-1,initialGridState);
+    }
+
+    useEffect(() => {
+        setInitialState();
     }, []);
 
     const gridContainerStyle = {
@@ -49,6 +53,7 @@ const GridContainer = (props) => {
                 grid={grid}
                 startingNode={props.startingNode}
                 goalNode={props.goalNode}
+                setInitialState={setInitialState}
             />
             <GridComponent
                 rows={props.rows}
