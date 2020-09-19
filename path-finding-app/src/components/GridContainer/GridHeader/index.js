@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import helpIcon from '../../../assets/images/help.png'
 import startIcon from '../../../assets/images/start.png'
 import refreshIcon from '../../../assets/images/refresh.png'
+import gridIcon from '../../../assets/images/boilerplate.png'
 
 import './styles.css'
 
@@ -27,8 +28,12 @@ const GridHeader = (props) => {
             }}>
                 <img src={refreshIcon} className="icon"/>
             </button>
+            <h1>{props.algorithmTitle}</h1>
             <button className="icon-btn" title="Help">
                 <img src={helpIcon} className="icon"/>
+            </button>
+            <button className="icon-btn" title="Boilerplates">
+                <img src={gridIcon} className="icon"/>
             </button>
         </div>
     )

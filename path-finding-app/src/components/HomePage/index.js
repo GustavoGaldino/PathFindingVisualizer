@@ -11,6 +11,7 @@ export default function HomePage(){
         <div id="homepage">
             <GridContainer
                 pathFindingAlgorithm={bfs}
+                algorithmTitle={"BFS"}
                 rows={25}
                 cols={25}
                 cellSize={"20px"}

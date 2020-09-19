@@ -67,6 +67,7 @@ const GridContainer = (props) => {
             <GridHeader
                 pathFindingAlgorithm={() => props.pathFindingAlgorithm(startingNode, goalNode)}
                 grid={grid}
+                algorithmTitle={props.algorithmTitle}
                 startingNode={props.startingNode}
                 goalNode={props.goalNode}
                 setInitialState={setInitialState}
