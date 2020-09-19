@@ -31,7 +31,7 @@ class Grid{
     }
 
     isWalkableCell(cell){
-        return ( !(cell.cellType === "WALL") );
+        return (cell.available);
     }
 
 }
