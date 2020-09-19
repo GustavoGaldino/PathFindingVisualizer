@@ -11,7 +11,13 @@ const GridCell = (props) => {
     }
 
     return(
-        <div className="grid-cell" style={myStyle} />
+        <div className="grid-cell" style={myStyle}
+            onClick={() => {
+                if(!(props.cell.startingNode || props.cell.goalNode)){
+                    props.toggleAvailableCell(props.cell, props.cell.grid);
+                }
+            }}
+        />
     );
 }
 

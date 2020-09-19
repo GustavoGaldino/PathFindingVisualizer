@@ -17,6 +17,12 @@ const GridContainer = (props) => {
         setGrid(newGridState);
     }
 
+    const toggleAvailableCell = (cell,grid) => {
+        let newGridState = {...grid};
+        newGridState.gridTable[cell.x][cell.y].available = !newGridState.gridTable[cell.x][cell.y].available;
+        setGrid(newGridState)
+    }
+
     const updateStartingNode = (x,y, grid=grid) => {
         setStartingNode(grid.getCell(x,y));
         let newGridState = {...grid};
@@ -62,6 +68,7 @@ const GridContainer = (props) => {
                 grid={grid}
                 startingNode={props.startingNode}
                 goalNode={props.goalNode}
+                toggleAvailableCell={toggleAvailableCell}
             />
         </div>
     )

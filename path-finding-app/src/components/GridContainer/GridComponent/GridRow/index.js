@@ -10,6 +10,7 @@ const GridRow = (props) => {
                     cell={cell}
                     key={cell.key}
                     cellSize={props.cellSize}
+                    toggleAvailableCell={props.toggleAvailableCell}
                 />
             ))}
         </div>
