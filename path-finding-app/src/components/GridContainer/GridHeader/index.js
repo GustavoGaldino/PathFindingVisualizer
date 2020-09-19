@@ -8,7 +8,7 @@ import './styles.css'
 const GridHeader = (props) => {
     return(
         <div className="grid-header">
-            <button className="icon-btn" onClick={props.pathFindingAlgorithm}>
+            <button className="icon-btn" onClick={() => props.pathFindingAlgorithm(props.startingNode, props.goalNode)}>
                 <img src={startIcon} className="icon"/>
             </button>
             <button className="icon-btn">
