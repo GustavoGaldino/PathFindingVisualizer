@@ -7,7 +7,7 @@ class Cell{
         this.y = y;
         this.grid = grid;
         this.updateVisitedCell = updateVisitedCell;
-        this.neighboursDirections = [ [0,1], [1,0], [0,-1], [-1,0] ];
+        this.neighboursDirections = [  [0,-1], [1,0], [-1,0], [0,1], ];
         this.key = [x,y];
     }
 
