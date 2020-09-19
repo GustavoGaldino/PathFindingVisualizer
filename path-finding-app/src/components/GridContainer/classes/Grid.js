@@ -1,15 +1,16 @@
 import Cell from './Cell'
 
 class Grid{
-    constructor(rows, cols){
+    constructor(rows, cols, updateVisitedCell){
         this.rows = rows;
         this.cols = cols;
+        this.updateVisitedCell = updateVisitedCell;
         this.gridTable = ( () => {
             let gridTable = new Array(this.rows);
             for(let i = 0 ; i < this.rows ; i++){
                 gridTable[i] = new Array(this.cols);
                 for(let j = 0 ;  j < this.cols ; j++){
-                    gridTable[i][j] = new Cell(true, false, i, j, this);
+                    gridTable[i][j] = new Cell(true, i, j, this, this.updateVisitedCell);
                 }
             }
             return gridTable;

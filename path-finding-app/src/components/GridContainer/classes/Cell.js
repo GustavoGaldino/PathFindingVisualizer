@@ -1,10 +1,12 @@
 class Cell{
-    constructor(available, visited, x, y, grid){
+    constructor(available, x, y, grid, updateVisitedCell){
         this.available = available;
-        this.visited = visited;
+        this.visited = false;
+        this.startingNode = false;
         this.x = x;
         this.y = y;
-        this.parentGrid = grid;
+        this.grid = grid;
+        this.updateVisitedCell = updateVisitedCell;
         this.neighboursDirections = [ [0,1], [1,0], [0,-1], [-1,0] ];
         this.key = [x,y];
     }
@@ -19,6 +21,11 @@ class Cell{
             }
         }
         return neighbours;
+    }
+
+    markAsVisited(){
+        this.visited = true;
+        this.updateVisitedCell(this, this.grid);
     }
 }
 export default Cell
