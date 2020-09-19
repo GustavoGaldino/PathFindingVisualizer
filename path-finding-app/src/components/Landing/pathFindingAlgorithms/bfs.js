@@ -10,20 +10,21 @@ async function bfs(startingNode, goalNode){
     reached.add(startingNode);
     while(!(frontier.length == 0)){
         let [currentNode, currentLayer] = frontier.pop();
+        let currentGridState = currentNode.grid;
         if(currentNode === goalNode){
             return
         }
         if(currentLayer === processingLayer){
             processingLayer = processingLayer + 1;
-            console.log(processingLayer);
-            await sleep(60);
+            currentNode.markAsVisited();
+            await sleep(50);
         }
         let currentNodeNeighbours = currentNode.getNeighbours();
         for(let nextNode of currentNodeNeighbours){
             if(!reached.has(nextNode)){
-                frontier.unshift([nextNode, currentLayer + 1]);
+                frontier.unshift([nextNode, currentLayer + 1, currentNode]);
                 reached.add(nextNode);
-                nextNode.markAsVisited();
+                currentGridState.gridTable[nextNode.x][nextNode.y].visited = true;
             }
         }
     }

@@ -11,8 +11,8 @@ export default function Landing(){
         <div id="landing">
             <GridContainer
                 pathFindingAlgorithm={bfs}
-                rows={30}
-                cols={30}
+                rows={25}
+                cols={25}
                 cellSize={"20px"}
             />
         </div>
