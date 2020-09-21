@@ -1,6 +1,4 @@
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
+import sleep from './sleep';
 
 async function dfs(currentNode, goalNode, visitedSet=(new Set()), flagObject={endRecursionFlag: false}){
     if(currentNode === goalNode){
