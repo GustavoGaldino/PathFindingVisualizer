@@ -59,7 +59,8 @@ const GridContainer = (props) => {
     }, []);
 
     const gridContainerStyle = {
-        border: "solid 2px black"
+        border: "solid 2px black",
+        margin: "4rem 0"
     }
 
     return(

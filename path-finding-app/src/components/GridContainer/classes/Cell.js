@@ -3,12 +3,18 @@ class Cell{
         this.available = available;
         this.visited = false;
         this.startingNode = false;
+        this.originDistance = 0;
+        this.cost = Infinity;
         this.x = x;
         this.y = y;
         this.grid = grid;
         this.updateVisitedCell = updateVisitedCell;
         this.neighboursDirections = [  [0,-1], [1,0], [-1,0], [0,1], ];
         this.key = [x,y];
+    }
+
+    getGoalDistance(goalNode){
+        return (Math.abs(goalNode.x - this.x) + Math.abs(goalNode.y - this.y));
     }
 
     getNeighbours(){
