@@ -14,10 +14,12 @@ const GridHeader = (props) => {
     return(
         <div className="grid-header">
             <button className="icon-btn" title="Start Algorithm" onClick={async () => {
-                setRunningAlgorithm(true);
-                props.cleanAllVisitedCells();
-                await props.pathFindingAlgorithm(props.startingNode, props.goalNode);
-                setRunningAlgorithm(false);
+                if(!runningAlgorithm){
+                    setRunningAlgorithm(true);
+                    props.cleanAllVisitedCells();
+                    await props.pathFindingAlgorithm(props.startingNode, props.goalNode);
+                    setRunningAlgorithm(false);
+                }
             }}>
                 <img src={startIcon} className="icon"/>
             </button>
