@@ -1,5 +1,5 @@
 import TinyQueue from 'tinyqueue';
-import sleep from './sleep';
+import sleep from './auxiliary/sleep';
 
 async function AStar(startingNode, goalNode){
     let reached = new Set();

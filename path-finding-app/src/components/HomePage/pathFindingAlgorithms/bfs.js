@@ -1,4 +1,4 @@
-import sleep from './sleep';
+import sleep from './auxiliary/sleep';
 
 async function bfs(startingNode, goalNode){
     let frontier = new Array();
