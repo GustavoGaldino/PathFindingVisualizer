@@ -1,4 +1,4 @@
-import sleep from './sleep';
+import sleep from './auxiliary/sleep';
 
 async function dfs(currentNode, goalNode, visitedSet=(new Set()), flagObject={endRecursionFlag: false}){
     if(currentNode === goalNode){

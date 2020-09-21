@@ -15,7 +15,7 @@ async function bfs(startingNode, goalNode){
         if(currentLayer === processingLayer){
             processingLayer = processingLayer + 1;
             currentNode.markAsVisited();
-            await sleep(50);
+            await sleep(200);
         }
         let currentNodeNeighbours = currentNode.getNeighbours();
         for(let nextNode of currentNodeNeighbours){
