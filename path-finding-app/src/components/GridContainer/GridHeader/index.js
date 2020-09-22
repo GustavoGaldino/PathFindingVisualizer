@@ -17,7 +17,7 @@ const GridHeader = (props) => {
                 if(!runningAlgorithm){
                     setRunningAlgorithm(true);
                     props.cleanAllVisitedCells();
-                    await props.pathFindingAlgorithm(props.startingNode, props.goalNode);
+                    await props.pathFindingAlgorithm();
                     setRunningAlgorithm(false);
                 }
             }}>

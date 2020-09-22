@@ -69,8 +69,6 @@ const GridContainer = (props) => {
                 pathFindingAlgorithm={() => props.pathFindingAlgorithm(startingNode, goalNode)}
                 grid={grid}
                 algorithmTitle={props.algorithmTitle}
-                startingNode={props.startingNode}
-                goalNode={props.goalNode}
                 setInitialState={setInitialState}
                 cleanAllVisitedCells={cleanAllVisitedCells}
             />
@@ -79,8 +77,6 @@ const GridContainer = (props) => {
                 cols={props.cols}
                 cellSize={props.cellSize}
                 grid={grid}
-                startingNode={props.startingNode}
-                goalNode={props.goalNode}
                 toggleAvailableCell={toggleAvailableCell}
             />
         </div>
