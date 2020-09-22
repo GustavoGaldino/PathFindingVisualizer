@@ -18,7 +18,8 @@ async function AStar(startingNode, goalNode){
                 reached.add(neighbour);
                 neighbour.markAsVisited();
                 await sleep(10)
-                neighbour.cost = peekNode.originDistance + 1 + neighbour.getGoalDistance(goalNode);
+                neighbour.originDistance = peekNode.originDistance + 1;
+                neighbour.cost = neighbour.originDistance + neighbour.getGoalDistance(goalNode);
                 heap.push(neighbour);
             }
         }

@@ -14,7 +14,7 @@ class Cell{
     }
 
     getGoalDistance(goalNode){
-        return Math.sqrt(Math.pow(goalNode.x - this.x,2) + Math.pow(goalNode.y - this.y,2));
+        return Math.sqrt(2)*Math.sqrt(Math.pow(goalNode.x - this.x,2) + Math.pow(goalNode.y - this.y,2));
     }
 
     getNeighbours(){
