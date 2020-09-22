@@ -11,13 +11,16 @@ const GridHeader = (props) => {
 
     const [runningAlgorithm, setRunningAlgorithm] = useState(false);
 
+    const timeStepDelay = 10;
+    let pathFindingAlgorithm = new props.pathFindingAlgorithm(timeStepDelay);
+
     return(
         <div className="grid-header">
             <button className="icon-btn" title="Start Algorithm" onClick={async () => {
                 if(!runningAlgorithm){
                     setRunningAlgorithm(true);
                     props.cleanAllVisitedCells();
-                    await props.pathFindingAlgorithm();
+                    await pathFindingAlgorithm.run(props.startingNode, props.goalNode);
                     setRunningAlgorithm(false);
                 }
             }}>
