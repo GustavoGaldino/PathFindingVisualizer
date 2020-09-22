@@ -10,6 +10,7 @@ const GridRow = (props) => {
                     cell={cell}
                     key={cell.key}
                     cellSize={props.cellSize}
+                    canPaint={props.canPaint}
                     toggleAvailableCell={props.toggleAvailableCell}
                 />
             ))}
