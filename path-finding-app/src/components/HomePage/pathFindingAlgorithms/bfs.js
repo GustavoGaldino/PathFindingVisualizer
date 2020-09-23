@@ -8,12 +8,12 @@ class bfs extends PathFindingAlgorithm{
     }
 
     async run(startingNode, goalNode){
-        let frontier = new Array();
+        let frontier = [];
         frontier.push([startingNode, 0]);
         let reached = new Set();
         let processingLayer = 0;
         reached.add(startingNode);
-        while(!(frontier.length == 0)){
+        while(!(frontier.length === 0)){
             let [currentNode, currentLayer] = frontier.pop();
             let currentGridState = currentNode.grid;
             if(currentNode === goalNode){

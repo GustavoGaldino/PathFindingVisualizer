@@ -14,7 +14,7 @@ class AStar extends PathFindingAlgorithm{
         startingNode.cost = startingNode.getGoalDistance(goalNode);
         let heap = new TinyQueue([startingNode], (a,b) => {return a.cost - b.cost});
         reached.add(startingNode);
-        while(!(heap.length == 0)){
+        while(!(heap.length === 0)){
             let peekNode = heap.pop();
             if(peekNode === goalNode){
                 return
