@@ -3,6 +3,11 @@
     justify-content: space-around;
     align-items: center;
     width: 32rem;
+    margin: 1rem 0;
+}
+
+.cell-info-text{
+    width: 24rem;
 }
 
 .cell-representation{
