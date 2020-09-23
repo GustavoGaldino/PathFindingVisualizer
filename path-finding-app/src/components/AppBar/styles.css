@@ -1,0 +1,15 @@
+.app-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 100vw;
+    position: relative;
+    top: 0px;
+    background-color: #005b96;
+}
+
+.app-bar-title{
+    margin: 0 2rem;
+    color: #dfeaf2;
+}
