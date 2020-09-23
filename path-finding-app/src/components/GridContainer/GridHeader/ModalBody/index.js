@@ -10,12 +10,17 @@ const ModalBody = forwardRef((props,ref) => {
             <CellInfo
                 cellColor={"cyan"}
                 cellInfoTitle={"Visited Cell"}
-                cellInfoParagraph={"This cell was visited during the algorithm runtime."}
+                cellInfoParagraph={"This is the visited cell. It was visited during the algorithm runtime."}
             />
             <CellInfo
                 cellColor={"white"}
                 cellInfoTitle={"Walkable Cell"}
-                cellInfoParagraph={"This cell is a walkable cell, not yet visited by the algorithm."}
+                cellInfoParagraph={"This is the walkable cell, not yet visited by the algorithm."}
+            />
+            <CellInfo
+                cellColor={"black"}
+                cellInfoTitle={"Wall Cell"}
+                cellInfoParagraph={"This is the wall cell. This cell is not walkable."}
             />
             <CellInfo
                 cellColor={"green"}
