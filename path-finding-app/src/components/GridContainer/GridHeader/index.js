@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import Modal from '@material-ui/core/Modal'
+
+import ModalBody from './ModalBody'
 
 import helpIcon from '../../../assets/images/help.png'
 import startIcon from '../../../assets/images/start.png'
@@ -10,6 +13,15 @@ import './styles.css'
 const GridHeader = (props) => {
 
     const [runningAlgorithm, setRunningAlgorithm] = useState(false);
+    const [open, setOpen] = useState(false);
+
+    const handleOpen = () => {
+        setOpen(true);
+    }
+
+    const handleClose = () => {
+        setOpen(false);
+    }
 
     const timeStepDelay = 10;
     let pathFindingAlgorithm = new props.pathFindingAlgorithm(timeStepDelay);
@@ -34,9 +46,18 @@ const GridHeader = (props) => {
                 <img src={refreshIcon} alt="refresh-icon" className="icon"/>
             </button>
             <h1>{props.algorithmTitle}</h1>
-            <button className="icon-btn" title="Help">
+            <button className="icon-btn" title="Help" onClick={handleOpen}>
                 <img src={helpIcon} alt="help-icon" className="icon"/>
             </button>
+            <Modal
+                style={{display: "flex", justifyContent: "center", alignItems: "center", outline: "0"}}
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="simple-modal-title"
+                aria-describedby="simple-modal-description"
+            >
+                <ModalBody/>
+            </Modal>
             <button className="icon-btn" title="Boilerplates">
                 <img src={gridIcon} alt="grid-icon" className="icon"/>
             </button>
