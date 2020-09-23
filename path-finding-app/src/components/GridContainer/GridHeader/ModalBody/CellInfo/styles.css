@@ -1,0 +1,12 @@
+.cell-info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 32rem;
+}
+
+.cell-representation{
+    width: 4rem;
+    height: 4rem;
+    border: 2px solid black;
+}
