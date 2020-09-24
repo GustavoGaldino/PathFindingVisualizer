@@ -1,13 +1,15 @@
 .help-modal-body{
-    width: 32rem;
+    width: 28rem;
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
 }
 
 .help-modal-body h1{
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin: 1rem 0;
 }
