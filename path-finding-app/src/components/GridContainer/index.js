@@ -60,7 +60,8 @@ const GridContainer = (props) => {
 
     const gridContainerStyle = {
         border: "solid 2px black",
-        margin: "2rem 0 4rem 0"
+        marginTop: "6rem",
+        marginBottom: "2rem"
     }
 
     return(
