@@ -56,7 +56,7 @@ const GridHeader = (props) => {
                 aria-labelledby="simple-modal-title"
                 aria-describedby="simple-modal-description"
             >
-                <ModalBody/>
+                <ModalBody />
             </Modal>
             <button className="icon-btn" title="Boilerplates">
                 <img src={gridIcon} alt="grid-icon" className="icon"/>

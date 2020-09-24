@@ -1,10 +1,24 @@
-import React from 'react'
+import React , { useState } from 'react'
+import Modal from '@material-ui/core/Modal'
+
+import HelpModalBody from './HelpModalBody'
 
 import helpIcon from '../../../../../assets/images/help.png'
 
 import './styles.css'
 
 const CellInfo = (props) => {
+
+    const [open, setOpen] = useState(false);
+
+    const handleOpen = () => {
+        setOpen(true);
+    }
+
+    const handleClose = () => {
+        setOpen(false);
+    }
+
     return(
         <div className="cell-info">
             <div className="cell-representation" style={{backgroundColor: props.cellColor}}/>
@@ -14,9 +28,22 @@ const CellInfo = (props) => {
                     <p style={{fontSize: "1.05rem"}}>{props.cellInfoParagraph}</p>
                 </div>
                 {props.help ?
-                    <button className="help-btn">
-                        <img src={helpIcon} />
-                    </button>
+                    <>
+                        <button className="help-btn" onClick={() => {
+                            handleOpen();
+                        }}>
+                            <img src={helpIcon} />
+                        </button>
+                        <Modal
+                            style={{display: "flex", justifyContent: "center", alignItems: "center", outline: "0"}}
+                            open={open}
+                            onClose={handleClose}
+                            aria-labelledby="simple-modal-title"
+                            aria-describedby="simple-modal-description"
+                        >
+                            <HelpModalBody />
+                        </Modal>
+                    </>
                     :
                     (() => {})
                 }
