@@ -3,15 +3,25 @@
     justify-content: space-around;
     align-items: center;
     width: 32rem;
-    margin: 1rem 0;
+    margin: .6rem 0;
 }
 
-.cell-info-text{
+.cell-info-text-container{
+    display: flex;
+    align-items: center;
     width: 24rem;
+    flex-direction: row;
 }
 
 .cell-representation{
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
     border: 2px solid black;
+}
+
+.help-btn{
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    left: 2rem;
 }

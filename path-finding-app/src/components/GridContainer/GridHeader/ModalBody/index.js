@@ -7,6 +7,7 @@ import './styles.css'
 const ModalBody = forwardRef((props,ref) => {
     return(
         <div ref={ref} id="modal-body">
+            <h1 style={{margin: ".5rem 0"}}>Description</h1>
             <CellInfo
                 cellColor={"cyan"}
                 cellInfoTitle={"Visited Cell"}
@@ -21,6 +22,7 @@ const ModalBody = forwardRef((props,ref) => {
                 cellColor={"black"}
                 cellInfoTitle={"Wall Cell"}
                 cellInfoParagraph={"This is the wall cell. This cell is not walkable."}
+                help={true}
             />
             <CellInfo
                 cellColor={"green"}
