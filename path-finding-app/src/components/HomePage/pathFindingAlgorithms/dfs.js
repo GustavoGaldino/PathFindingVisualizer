@@ -17,7 +17,7 @@ class dfs extends PathFindingAlgorithm{
                 if(!visitedSet.has(neighbour)){
                     visitedSet.add(neighbour);
                     neighbour.markAsVisited();
-                    await sleep(10);
+                    await sleep(this.timeStepDelay);
                     await this.run(neighbour, goalNode, visitedSet, flagObject);
                     if(flagObject.endRecursionFlag){
                         return

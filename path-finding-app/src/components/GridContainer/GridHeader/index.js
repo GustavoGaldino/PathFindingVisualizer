@@ -23,7 +23,7 @@ const GridHeader = (props) => {
         setOpen(false);
     }
 
-    const timeStepDelay = 10;
+    const timeStepDelay = 5;
     let pathFindingAlgorithm = new props.pathFindingAlgorithm(timeStepDelay);
 
     return(

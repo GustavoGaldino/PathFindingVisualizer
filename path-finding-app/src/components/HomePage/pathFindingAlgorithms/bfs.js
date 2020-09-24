@@ -5,6 +5,7 @@ import PathFindingAlgorithm from './PathFindingAlgorithm'
 class bfs extends PathFindingAlgorithm{
     constructor(timeStepDelay){
         super(timeStepDelay);
+        this.bfsDelayFactor = 20;
     }
 
     async run(startingNode, goalNode){
@@ -22,7 +23,7 @@ class bfs extends PathFindingAlgorithm{
             if(currentLayer === processingLayer){
                 processingLayer = processingLayer + 1;
                 currentNode.markAsVisited();
-                await sleep(200);
+                await sleep(this.timeStepDelay * this.bfsDelayFactor);
             }
             let currentNodeNeighbours = currentNode.getNeighbours();
             for(let nextNode of currentNodeNeighbours){
